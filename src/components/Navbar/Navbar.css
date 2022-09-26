@@ -1,0 +1,17 @@
+.navbar{
+    background-color: var(--mauve);
+}
+.navbar-brand{
+    font-family: var(--brand-name);
+    font-size: 3em;
+    color: var(--blackish);
+    margin: 0 0.8em
+}
+.navbar-nav{
+    color: var(--blackish);
+}
+.nav-link{
+    font-family: var(--regular-text);
+    font-size: 1em;
+    font-weight: 500
+}

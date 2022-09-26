@@ -1,0 +1,11 @@
+.btnCart{
+    background-color: var(--pink);
+    border: 2px solid var(--light-blue);
+    border-radius: 7px;
+    padding: 0.6em 0.8em;
+    transition: all 0.4s linear;
+}
+.btnCart:hover{
+    background-color: var(--light-blue);
+    border: 2px solid var(--pink);
+}

@@ -1,6 +1,6 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 /* VARIABLES */
 :root{
@@ -13,32 +13,17 @@
   --blackish: #090302;
   /* Fonts */
   --regular-text: 'Montserrat';
-  --brand-name: 'Monsieur La Doulaise';
+  --brand-name: 'Playfair Display', serif;
+}
+body {
+  margin: 0;
+  background-color: #FFE5D9
 }
 /* NAVBAR STYLE */
-.navbar{
-  background-color: var(--mauve);
-}
-.navbar-brand{
-  font-size: 2em;
-}
-.nav-item{
-  font: var(--regular-text);
-  font-size: 1em;
-}
-.btnCart{
-  background-color: var(--pink);
-  border: 2px solid var(--light-blue);
-  border-radius: 7px;
-  padding: 0.6em 0.8em;
-  transition: all 0.4s linear;
-}
-.btnCart:hover{
-  background-color: var(--light-blue);
-  border: 2px solid var(--pink);
-}
+@import './components/Navbar/Navbar.css';
+
 .simple-text{
-  font: var(--regular-text);
+  font-family: var(--regular-text);
   font-size: 1.5em;
   color: var(--blackish);
   text-align: center;
