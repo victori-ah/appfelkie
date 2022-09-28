@@ -1,0 +1,15 @@
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.counter-text{
+    font-family: var(--regular-text);
+    font-size: 1em;
+    color: var(--blackish);
+}
+.counter-btn{
+    font-size: 0.8em;
+    color: var(--blackish);
+}

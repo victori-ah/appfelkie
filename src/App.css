@@ -21,7 +21,26 @@ body {
 }
 /* NAVBAR STYLE */
 @import './components/Navbar/Navbar.css';
-
+/* COUNTER STYLE */
+@import './components/Counter/counter.css';
+/* BUTTON STYLE */
+.btn1{
+  background-color: var(--pink);
+  border: 2px solid var(--light-blue);
+  border-radius: 7px;
+  padding: 0.6em 0.8em;
+  transition: all 0.4s linear;
+}
+.btn1:hover{
+  background-color: var(--light-blue);
+  border: 2px solid var(--pink);
+}
+.btn2{
+  background-color: var(--softer-pink);
+  border: none;
+  padding: 0.6em 0.8em;
+}
+/* TEXT STYLE */
 .simple-text{
   font-family: var(--regular-text);
   font-size: 1.5em;

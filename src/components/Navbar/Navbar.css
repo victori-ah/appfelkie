@@ -5,7 +5,8 @@
     font-family: var(--brand-name);
     font-size: 3em;
     color: var(--blackish);
-    margin: 0 0.8em
+    margin: 0 0.8em;
+    padding: 0;
 }
 .navbar-nav{
     color: var(--blackish);
