@@ -1,28 +1,29 @@
-import React from 'react';
-import './ItemListContainer.css';
-import { useState, useEffect } from 'react';
-import { getProducts } from '../../asyncMock';
-import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css'
+import { useState, useEffect } from 'react'
+import { getProducts } from '../../asyncMock'
 
 const ItemListContainer = ({ greeting }) => {
-// Estado para guardar los productos
     const [products, setProducts] = useState([])
-// Usamos useEffect, se cre auna promesa y usamos then para manejar el estado de esa promesa.
     useEffect(() => {
-        // Llamada asincrona
-        getProducts().then(res => {
-            console.log(res)
-            setProducts(res)
-        }).catch(error => {
-            console.log(error)
+        getProducts().then(products => {
+            setProducts(products)
         })
     }, [])
 
+    console.log(products)
 
     return(
         <div className='itemListContainer'>
             <h1 className='simple-text'> {greeting} </h1>
-            <ItemList products={products}/>
+            <div>
+                { products.map(prod => (
+                    <div key={prod.id}>
+                        <h1>{prod.name}</h1>
+                        <img src={prod.img} alt={prod.alt}></img>
+                    </div>
+                ))
+                }
+            </div>
         </div>
     )
 }
