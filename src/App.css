@@ -17,7 +17,7 @@
 }
 body {
   margin: 0;
-  background-color: #FFE5D9
+  /* background-color: #FFE5D9 */
 }
 /* NAVBAR STYLE */
 @import './components/Navbar/Navbar.css';
@@ -34,17 +34,97 @@ body {
 .btn1:hover{
   background-color: var(--light-blue);
   border: 2px solid var(--pink);
+  box-shadow:0px 0px 20px 3px var(--pink) inset;
 }
 .btn2{
-  background-color: var(--softer-pink);
+  background-color: white;
   border: none;
   padding: 0.6em 0.8em;
 }
+.btnDetail{
+  width: auto;
+  height: 3em;
+  background-color: var(--pink);
+  border: 2px solid var(--light-blue);
+  border-radius: 7px;
+  padding: 0.6em 0.8em;
+  transition: all 0.4s linear;
+  margin: 0.2em auto 0.4em auto;
+}
+.btnDetail:hover{
+  background-color: var(--light-blue);
+  border: 2px solid var(--pink);
+  box-shadow:0px 0px 20px 3px var(--pink) inset;
+}
 /* TEXT STYLE */
+.prodTitleText{
+  font-family: var(--brand-name);
+  font-size: 1.2em;
+  color: var(--blackish);
+  padding: 0.5em;
+  margin: 0;
+}
 .simple-text{
   font-family: var(--regular-text);
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--blackish);
   text-align: center;
+  padding: 0.3em;
+}
+.prodPrice{
+  font-family: var(--regular-text);
+  font-size: 0.9em;
+  color: var(--blackish);
+}
+/* DETAIL */
+.detailTitleText{
+  font-family: var(--brand-name);
+  font-size: 1.5em;
+  color: var(--blackish);
+  text-align: left;
+}
+.detailPrice{
+  font-family: var(--regular-text);
+  font-size: 1em;
+  color: var(--blackish);
+}
+.detailText{
+  font-family: var(--regular-text);
+  font-size: 1em;
+  color: var(--blackish);
+  text-align: left;
+}
+/* CARD */
+.card{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--mauve);
+  border-radius: 10px;
   padding: 1em;
+}
+.card:hover{
+  box-shadow: 2px 0px 19px 7px rgba(157,129,137,0.69) inset;
+-webkit-box-shadow: 2px 0px 19px 7px rgba(157,129,137,0.69) inset;
+-moz-box-shadow: 2px 0px 19px 7px rgba(157,129,137,0.69) inset;
+  /* box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69) inset;
+-webkit-box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69) inset;
+-moz-box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69) inset; */
+}
+/* IMAGES */
+.prodImg{
+  display: flex;
+  justify-content: center;
+  max-height: 17em;
+}
+/* ITEM LIST CONTAINER */
+.itemList{
+  padding: 0;
+  margin: 1em 0 1em 0;
+  gap: 0.5em;
+}
+.prodData{
+  margin: 0;
+  padding: 0;
 }
