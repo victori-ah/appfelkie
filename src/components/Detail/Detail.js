@@ -2,9 +2,18 @@ import Counter from '../Counter/counter';
 
 const Detail = ({ product }) => {
     return(
-        <div className='d-flex row mt-5'>
+        <div className='d-flex row m-5'>
             <div className='col'>
-                <img src={product.img} alt={product.alt}></img>
+                <div className="flip-card">
+                    <div className="flip-card-inner">
+                        <div className="flip-card-front">
+                            <img src={product.img} alt={product.alt} className="imgFlip"></img>
+                        </div>
+                        <div className="flip-card-back">
+                            <img src={product.img2} alt={product.alt} className="imgFlip"></img>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className='col d-flex row'>
                 <div className='col '>
