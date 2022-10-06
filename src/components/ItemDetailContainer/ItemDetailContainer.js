@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getProduct } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import Detail from "../Detail/Detail";
+import PageLoader from "../pageLoader/PageLoader";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
@@ -18,7 +19,7 @@ const ItemDetailContainer = () => {
 
     if(loading){
         return(
-            <h1>Loading~</h1>
+            <PageLoader />
         )
     }
 

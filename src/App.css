@@ -1,12 +1,13 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 
 /* VARIABLES */
 :root{
   /* Colors */
-  --mauve: #9D8189;
-  --pink: #F4ACB7;
+  --mauve: #DBBBF5;
+  --pink: #F8C9D0;
   --soft-pink: #FFCAD4;
   --softer-pink: #FFE5D9;
   --light-blue: #D8E2DC;
@@ -14,6 +15,7 @@
   /* Fonts */
   --regular-text: 'Montserrat';
   --brand-name: 'Playfair Display', serif;
+  --serif-text: 'Ovo', serif;
 }
 body {
   margin: 0;
@@ -23,6 +25,8 @@ body {
 @import './components/Navbar/Navbar.css';
 /* COUNTER STYLE */
 @import './components/Counter/counter.css';
+/* PAGE LOADER */
+@import './components/pageLoader/pageLoader.css';
 /* BUTTON STYLE */
 .btn1{
   background-color: var(--pink);
@@ -53,8 +57,8 @@ body {
 }
 /* TEXT STYLE */
 .prodTitleText{
-  font-family: var(--brand-name);
-  font-size: 1.2em;
+  font-family: var(--serif-text);
+  font-size: 1em;
   color: var(--blackish);
   padding: 0.5em;
   margin: 0;
@@ -67,24 +71,25 @@ body {
   padding: 0.3em;
 }
 .prodPrice{
-  font-family: var(--regular-text);
+  font-family: var(--serif-text);
   font-size: 0.9em;
   color: var(--blackish);
 }
 /* DETAIL */
 .detailTitleText{
-  font-family: var(--brand-name);
+  font-family: var(--serif-text);
+  font-weight: 500;
   font-size: 1.5em;
   color: var(--blackish);
   text-align: left;
 }
 .detailPrice{
-  font-family: var(--regular-text);
+  font-family: var(--serif-text);
   font-size: 1em;
   color: var(--blackish);
 }
 .detailText{
-  font-family: var(--regular-text);
+  font-family: var(--serif-text);
   font-size: 1em;
   color: var(--blackish);
   text-align: left;
@@ -126,7 +131,6 @@ body {
   background-color: transparent;
   perspective: 1000px;
 }
-
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -136,11 +140,9 @@ body {
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -148,14 +150,12 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 .flip-card-front {
-  background-color: #bbb;
+  background-color: white;
   color: black;
 }
-
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: white;
   color: white;
   transform: rotateY(180deg);
 }

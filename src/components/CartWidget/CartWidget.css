@@ -10,5 +10,4 @@
 .btnCart:hover{
     background-color: var(--light-blue);
     border: 1px solid var(--pink);
-    box-shadow:0px 0px 20px 1px var(--pink) inset
 }

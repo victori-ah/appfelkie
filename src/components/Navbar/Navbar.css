@@ -3,7 +3,7 @@
 }
 .navbar-brand{
     font-family: var(--brand-name);
-    font-size: 3em;
+    font-size: 3.2em;
     color: var(--blackish);
     margin: 0 0.8em;
     padding: 0;
@@ -12,7 +12,10 @@
     color: var(--blackish);
 }
 .nav-link{
-    font-family: var(--regular-text);
+    font-family: var(--serif-text);
     font-size: 1.2em;
-    font-weight: 500
+    font-weight: 500;
+}
+.nav-link:hover{
+    text-shadow: 0px 1px 14px rgba(248,201,208,1);
 }
