@@ -12,8 +12,6 @@ const ItemListContainer = () => {
         })
     }, [categoryId])
 
-    console.log(products)
-
     return(
         <div className="container-fluid">
             <div className='container-m'>

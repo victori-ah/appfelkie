@@ -28,18 +28,6 @@ body {
 /* PAGE LOADER */
 @import './components/pageLoader/pageLoader.css';
 /* BUTTON STYLE */
-.btn1{
-  background-color: var(--pink);
-  border: 2px solid var(--mauve);
-  border-radius: 7px;
-  padding: 0.2em auto;
-  margin: 0 0.2em 0 0.2em;
-}
-.btn2{
-  background-color: white;
-  border: none;
-  padding: 0.6em 0.8em;
-}
 .btnDetail{
   color: var(--blackish);
   width: auto;
@@ -60,7 +48,7 @@ body {
   font-family: var(--serif-text);
   font-size: 1em;
   color: var(--blackish);
-  padding: 0.5em;
+  padding: 0.5em 0 0.5em 0;
   margin: 0;
 }
 .simple-text{
@@ -94,6 +82,21 @@ body {
   color: var(--blackish);
   text-align: left;
 }
+.finalizarContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.finalizarText{
+  font-family: var(--brand-name);
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--blackish);
+  text-decoration: none;
+}
+.finalizarText:hover{
+  color: var(--blackish);
+}
 /* CARD */
 .card{
   height: auto;
@@ -119,7 +122,7 @@ body {
 /* ITEM LIST CONTAINER */
 .itemList{
   padding: 0;
-  margin: 1em 0 1em 0;
+  margin: 3em 0 1em 0;
   gap: 0.5em;
 }
 .prodData{

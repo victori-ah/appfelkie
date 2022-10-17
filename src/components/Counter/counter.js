@@ -1,30 +1,27 @@
 import { useState } from 'react';
-import { FaTrashAlt } from "react-icons/fa";
 
-const Counter = () => {
-    const initial = 0;
-    const [count, setCount] = useState(initial);
+const Counter = ({stock = 0, initial = 0, onAdd}) => {
+    const [quantity, setQuantity] = useState(initial)
 
     const decrement = () => {
-        if(count>0){
-            setCount(count-1)
+        if(quantity>0){
+            setQuantity(quantity-1)
         }
     }
     const increment = () => {
-        setCount(count+1)
-    }
-    const reset = () => {
-        setCount(initial)
+        if(quantity<stock){
+            setQuantity(quantity+1)
+        }
     }
 
     return(
         <div className='counter-container'>
-            <p className='counter-text'>{count}</p>
+            <p className='counter-text'>{quantity}</p>
             <div >
-                <button onClick={decrement} className='btn1 counter-btn'> - </button>
-                <button onClick={increment} className='btn1 counter-btn'> + </button>
-                <button onClick={reset} className='btn2 counter-btn'><FaTrashAlt/></button>
+                <button onClick={decrement} className='btn1'> - </button>
+                <button onClick={increment} className='btn1'> + </button>
             </div>
+            <button className='btn1 btnAdd' onClick={()=>onAdd(quantity)} >Add to cart</button>
         </div>
     )
 }

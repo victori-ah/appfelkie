@@ -3,16 +3,34 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    row-gap: 0.8em;
 }
 .counter-text{
     font-family: var(--serif-text);
     font-size: 0.9em;
     color: var(--blackish);
-    margin: 0;
+    margin-bottom: 0;
 }
-.counter-btn{
+.btn1{
+    background-color: var(--pink);
+    border: 2px solid var(--mauve);
+    border-radius: 7px;
+    margin: 0 0.2em 0 0.2em;
     font-family: var(--regular-text);
     font-weight: bold;
     font-size: 0.9em;
     color: var(--blackish);
+}
+.btnAdd{
+    font-family: var(--brand-name);
+    font-size: 1.2em;
+    font-weight: 500;
+    max-width: max-content;
+    align-self: center;
+    padding: 0.6em 0.8em;
+    transition: all 0.4s linear;
+}
+.btnAdd:hover{
+    background-color: var(--light-blue);
+    border: 2px solid var(--pink);
 }

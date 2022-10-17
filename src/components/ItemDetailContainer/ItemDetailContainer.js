@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { getProduct } from "../../asyncMock";
+import { getProductById } from "../../asyncMock";
 import { useParams } from "react-router-dom";
-import Detail from "../Detail/Detail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import PageLoader from "../pageLoader/PageLoader";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({ setCart }) => {
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
     const { productId } = useParams()
 
     useEffect(() => {
-        getProduct(productId).then(product => {
+        getProductById(productId).then(product => {
             setProduct(product)
         }).finally(() => {
             setLoading(false)
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className="container-sm">
-            <Detail key={product.id} product={product} className='container-sm' />
+            <ItemDetail {...product} setCart={setCart} className='container-sm' />
         </div>
     )
 };
