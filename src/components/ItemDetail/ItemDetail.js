@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, name, img, img2, category, description, price, stock }) => {
     const [quantityToAdd, setQuantityToAdd] = useState(0)
-
-    const { addItem } = useContext(CartContext)
+    const { addItem, getProductQuantity } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         setQuantityToAdd(quantity)
@@ -18,6 +17,8 @@ const ItemDetail = ({ id, name, img, img2, category, description, price, stock }
 
         addItem(productToAdd)
     }
+
+    const productAddedQuantity = getProductQuantity(id)
 
     return(
         <div className='d-flex row m-5'>
@@ -41,7 +42,7 @@ const ItemDetail = ({ id, name, img, img2, category, description, price, stock }
                     <div className='counterContainer'>
                         {
                             quantityToAdd === 0 ? (
-                                <Counter onAdd={handleOnAdd} stock={stock} />
+                                <Counter onAdd={handleOnAdd} stock={stock} initial={productAddedQuantity} />
                             ) : (
                                 <div className='finalizarContainer'>
                                     <button className='btnDetail'><Link to='/cart' className='finalizarText' >Finalizar compra</Link></button>
