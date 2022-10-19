@@ -2,7 +2,7 @@
     width: 2em;
     height: 2em;
     position: relative;
-    margin-top: 5em;
+    margin-top: 7em;
 }
 .loader::before, .loader::after {
     content: '';

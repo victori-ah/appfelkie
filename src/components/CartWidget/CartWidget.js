@@ -9,10 +9,12 @@ const CartWidget = () => {
     const totalQuantity = getTotalQuantity()
 
     return (
-        <Link to='/cart' className='btnCart'>
+        <div className='btnCart'>
             <p className='widgetNumber'>{totalQuantity}</p>
-            <img src='https://cdn.sweettooth.io/v1/images/launcher_icons/bag.svg?color=%23000000' alt='Bag icon'/>
-        </Link>
+            <Link to='/cart' >
+                <img src='https://cdn.sweettooth.io/v1/images/launcher_icons/bag.svg?color=%23000000' alt='Bag icon'/>
+            </Link>
+        </div>
     )
 }
 
