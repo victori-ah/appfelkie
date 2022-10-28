@@ -1,6 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 
 /* VARIABLES */
@@ -13,9 +12,8 @@
   --light-blue: #D8E2DC;
   --blackish: #090302;
   /* Fonts */
-  --regular-text: 'Montserrat';
+  --regular-text: 'Lato', sans-serif;
   --brand-name: 'Ovo', serif;
-  --serif-text: 'Ovo', serif;
 }
 body {
   margin: 0;
@@ -45,7 +43,7 @@ body {
 }
 /* TEXT STYLE */
 .prodTitleText{
-  font-family: var(--serif-text);
+  font-family: var(--brand-name);
   font-size: 1em;
   color: var(--blackish);
   padding: 0.5em 0 0.5em 0;
@@ -59,25 +57,25 @@ body {
   padding: 0.3em;
 }
 .prodPrice{
-  font-family: var(--serif-text);
+  font-family: var(--brand-name);
   font-size: 0.9em;
   color: var(--blackish);
 }
 /* DETAIL */
 .detailTitleText{
-  font-family: var(--serif-text);
+  font-family: var(--brand-name);
   font-weight: 500;
   font-size: 1.5em;
   color: var(--blackish);
   text-align: left;
 }
 .detailPrice{
-  font-family: var(--serif-text);
+  font-family: var(--brand-name);
   font-size: 1em;
   color: var(--blackish);
 }
 .detailText{
-  font-family: var(--serif-text);
+  font-family: var(--brand-name);
   font-size: 1em;
   color: var(--blackish);
   text-align: left;
@@ -108,9 +106,10 @@ body {
   padding: 1em;
 }
 .card:hover{
-  box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69);
--webkit-box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69);
--moz-box-shadow: 2px 0px 19px 7px rgba(244,172,183,0.69);
+  scale: 1.01;
+  box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
+-webkit-box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
+-moz-box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
 }
 /* IMAGES */
 .prodImg{

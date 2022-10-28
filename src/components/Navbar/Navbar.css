@@ -12,16 +12,16 @@
     color: var(--blackish);
 }
 .nav-link{
-    font-family: var(--serif-text);
+    font-family: var(--brand-name);
     font-size: 1.2em;
     font-weight: 500;
 }
 .nav-link:hover{
     text-shadow: 0px 1px 14px rgba(248,201,208,1);
 }
-.navbar-band{
+/* .navbar-band{
     background-color: var(--mauve);
     height: 0.2em;
     width: 100vw;
     margin-top: 0.6em;
-}
+} */

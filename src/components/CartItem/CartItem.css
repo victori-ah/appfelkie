@@ -2,9 +2,6 @@
     border: 1px solid var(--soft-pink);
     transition: all 0.2s linear;
 }
-.cartDisplay:hover{
-    scale: 1.01;
-}
 .cartItemName{
     display: flex;
     flex-direction: column;

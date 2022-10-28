@@ -12,7 +12,7 @@ const ItemDetail = ({ id, name, img, img2, category, description, price, stock }
         setQuantityToAdd(quantity)
 
         const productToAdd = {
-            id, name, price, quantity
+            id, name, price, quantity, img
         }
 
         addItem(productToAdd)
@@ -45,7 +45,8 @@ const ItemDetail = ({ id, name, img, img2, category, description, price, stock }
                                 <Counter onAdd={handleOnAdd} stock={stock} initial={productAddedQuantity} />
                             ) : (
                                 <div className='finalizarContainer'>
-                                    <button className='btnDetail'><Link to='/cart' className='finalizarText' >Finalizar compra</Link></button>
+                                    <button className='btnDetail'><Link to='/cart' className='finalizarText' >Go to checkout</Link></button>
+                                    <button className='btnDetail'><Link to='/' className='finalizarText' >Keep Shopping</Link></button>
                                 </div>
                             )
                         }

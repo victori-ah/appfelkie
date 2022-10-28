@@ -12,6 +12,10 @@
     margin-top: 1rem;
     margin-bottom: 0;
 }
+.cartText3{
+    font-family: var(--regular-text);
+    font-size: 1.2rem;
+}
 .cartShopBtn{
     text-decoration: none;
     font-size: 1.3rem;
@@ -33,4 +37,14 @@
     align-self: flex-end;
     padding: 0.5rem;
     margin-top: 2rem;
+    background-color: white;
+    border: 2px solid var(--mauve);
+    border-radius: 7px;
+    transition: all 0.2s linear;
+}
+.cartTrashBtn:hover{
+    scale: 1.001;
+    box-shadow: 1px 1px 9px 3px rgba(216,226,220,0.84);
+-webkit-box-shadow: 1px 1px 9px 3px rgba(216,226,220,0.84);
+-moz-box-shadow: 1px 1px 9px 3px rgba(216,226,220,0.84);
 }

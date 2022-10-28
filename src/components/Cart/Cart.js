@@ -21,7 +21,7 @@ const Cart = () => {
             <h3 className='cartTitle'>Shopping cart</h3>
             { cart.map(p=><CartItem key={p.id}{...p}/>) }
             <div className='d-flex flex-column'>
-                <p className='cartText mt-3'>Total: ${total}</p> 
+                <p className='cartText3 mt-3'>Total: ${total}</p> 
                 <Link to='/checkout' className='cartText2 cartShopBtn'>Shop now!</Link>
             </div>
             <button onClick={() => deleteAll()} className='cartTrashBtn'>Delete all cart contents <FaRegTrashAlt /></button>

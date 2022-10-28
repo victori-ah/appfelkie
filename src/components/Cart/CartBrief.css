@@ -1,0 +1,7 @@
+.cartBrief{
+    list-style: none;
+    
+}
+.cartBriefItem{
+    font-family: var(--brand-name);
+}

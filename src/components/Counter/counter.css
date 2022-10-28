@@ -6,7 +6,7 @@
     row-gap: 0.8em;
 }
 .counter-text{
-    font-family: var(--serif-text);
+    font-family: var(--brand-name);
     font-size: 0.9em;
     color: var(--blackish);
     margin-bottom: 0;
