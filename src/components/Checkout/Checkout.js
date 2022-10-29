@@ -8,12 +8,12 @@ const Checkout = () => {
     const { cart } = useContext(CartContext)
 
     return(
-        <div className='checkout container-sm row justify-content-center'>
-            <article className="col">
-                <h1>Checkout list</h1>
+        <div className='checkout container-sm'>
+            <article className=''>
+                <h1 className='checkout-title'>Checkout list</h1>
                 { cart.map(p=><CartBrief key={p.id}{...p}/>) }
             </article>
-            <article className='col'>
+            <article className=''>
                 <BuyForm />
             </article>
         </div>

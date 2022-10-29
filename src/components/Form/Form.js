@@ -1,6 +1,8 @@
 import './Form.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { CartContext } from '../../context/CartContext';
+
 
 const BuyForm = () => {
     const [setForm, changeSetForm] = useState(false)
@@ -51,6 +53,7 @@ const BuyForm = () => {
             onSubmit={( values, {resetForm} ) => {
                 resetForm();
                 console.log('Form Sent')
+                console.log(values)
                 changeSetForm(true)
                 setTimeout(() => changeSetForm(false), 5000)
             }}
@@ -132,7 +135,7 @@ const BuyForm = () => {
                         />
                     </div>
                     <button type="submit" className='submitBtn'>Enviar</button>
-						{setForm && <p className="exito">Your order has been successfully placed!~</p>}
+						{setForm && <p className="success">Your order has been successfully placed!~</p>}
                 </Form>
             )}
         </Formik>
