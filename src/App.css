@@ -101,21 +101,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--mauve);
-  border-radius: 10px;
+  border: none;
   padding: 1em;
-}
-.card:hover{
-  scale: 1.01;
-  box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
--webkit-box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
--moz-box-shadow: 1px 0px 20px 1px rgba(244,172,183,0.69);
 }
 /* IMAGES */
 .prodImg{
   display: flex;
   justify-content: center;
-  /* max-height: 20em; */
   width: 100%;
 }
 /* ITEM LIST CONTAINER */

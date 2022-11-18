@@ -1,11 +1,35 @@
 import './Form.css';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { CartContext } from '../../context/CartContext';
+import { useCart } from '../../context/CartContext';
+import { useOrders } from '../../services/firebase/orders.js';
 
 
 const BuyForm = () => {
     const [setForm, changeSetForm] = useState(false)
+    const [orderId, setOrderId] = useState('')
+    const { cart, deleteAll, totalQuantity, total } = useCart()
+    const { createOrder } = useOrders()
+
+    const handleCreateOrder = () => {
+        createOrder().then(response => {
+            console.log(response)
+            if(response.result === 'orderCreated') {
+                deleteAll()
+                setOrderId(response.id)
+            }
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            console.log('holi')
+        })
+    }
+
+    if(orderId !== ''){
+        return(
+            console.log('se creo una orden')
+        )
+    }
 
     return(
         <Formik
@@ -134,7 +158,7 @@ const BuyForm = () => {
                         component={() => (<div className="error">{errors.email2}</div>)}
                         />
                     </div>
-                    <button type="submit" className='submitBtn'>Enviar</button>
+                    <button type="submit" className='submitBtn' onClick={handleCreateOrder}>Enviar</button>
 						{setForm && <p className="success">Your order has been successfully placed!~</p>}
                 </Form>
             )}
